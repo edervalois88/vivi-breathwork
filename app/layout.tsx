@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" data-theme="winter" className="scroll-smooth">
-      <body className={`${dmSans.className} ${outfit.variable} ${dmSans.variable} font-sans`}>
+    <html lang="es" className="scroll-smooth">
+      <body className={`${dmSans.className} ${outfit.variable} ${dmSans.variable} font-sans antialiased text-base-content bg-base-100`}>
         <BreathingBackground />
         <Header />
         <main className="min-h-screen relative overflow-hidden">

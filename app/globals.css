@@ -2,8 +2,26 @@
 @plugin "daisyui";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8fafc;
+  --foreground: #334155;
+  
+  /* Breathwork Theme Overrides for DaisyUI */
+  --color-primary: #22d3ee;    /* Cyan-400 */
+  --color-primary-content: #ffffff;
+  --color-secondary: #818cf8;  /* Indigo-400 */
+  --color-secondary-content: #ffffff;
+  --color-accent: #2dd4bf;     /* Teal-400 */
+  --color-accent-content: #ffffff;
+  --color-neutral: #1e293b;    /* Slate-800 */
+  --color-neutral-content: #ffffff;
+  --color-base-100: #f8fafc;   /* Slate-50 */
+  --color-base-200: #f1f5f9;   /* Slate-100 */
+  --color-base-300: #e2e8f0;   /* Slate-200 */
+  --color-base-content: #334155; /* Slate-700 */
+  
+  --radius-selector: 2rem;
+  --radius-field: 1rem;
+  --radius-box: 2rem;
 }
 
 @theme inline {
@@ -11,13 +29,13 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-dm);
   --font-heading: var(--font-outfit);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  
+  /* Map DaisyUI colors to Tailwind theme for utility usage */
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-base-100: var(--color-base-100);
+  --color-base-content: var(--color-base-content);
 }
 
 body {

@@ -10,7 +10,7 @@ export default function HeroSection() {
   const titleWords = ["Respira.", "Conecta.", "Transforma."];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 md:pt-20">
       
       {/* Abstract Background Image */}
       <div className="absolute inset-0 z-0 opacity-40">
@@ -30,13 +30,13 @@ export default function HeroSection() {
             transition={{ delay: 0.2 }}
             className="mb-8"
         >
-            <span className="px-4 py-2 rounded-full border border-primary/30 bg-white/30 backdrop-blur-md text-sm font-medium text-primary shadow-sm">
+            <span className="px-4 py-2 rounded-full border border-primary/30 bg-white/30 backdrop-blur-md text-xs md:text-sm font-medium text-primary shadow-sm">
                 ✨ Bienestar Integral a través de la Respiración
             </span>
         </motion.div>
 
         {/* Dynamic Title */}
-        <h1 className="text-6xl md:text-8xl font-heading font-bold tracking-tight leading-[1.1] mb-8 text-base-content">
+        <h1 className="text-4xl sm:text-5xl md:text-8xl font-heading font-bold tracking-tight leading-[1.1] mb-8 text-base-content break-words">
           {titleWords.map((word, i) => (
             <motion.span
               key={i}

@@ -4,29 +4,29 @@ import Image from "next/image";
 
 export default function ValuePropositionSection() {
     return (
-        <section className="py-32 relative z-10">
+        <section className="py-20 md:py-32 relative z-10">
              <div className="max-w-7xl mx-auto px-4">
-                <div className="text-center mb-20">
+                <div className="text-center mb-12 md:mb-20">
                     <motion.h2 
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="font-heading text-4xl md:text-5xl font-bold mb-6"
+                        className="font-heading text-3xl md:text-5xl font-bold mb-4 md:mb-6"
                     >
                         Más que respirar,<br/><span className="text-primary italic">es vivir conscientemente</span>
                     </motion.h2>
-                    <p className="text-xl opacity-70 max-w-2xl mx-auto">La ciencia y la tradición se unen para ofrecerte resultados tangibles.</p>
+                    <p className="text-lg md:text-xl opacity-70 max-w-2xl mx-auto">La ciencia y la tradición se unen para ofrecerte resultados tangibles.</p>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[300px]">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-auto md:auto-rows-[300px]">
                     
                     {/* Bento Box 1: Corporate Image (Large) */}
                     <motion.div 
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="md:col-span-2 row-span-2 relative rounded-[2.5rem] overflow-hidden group shadow-lg"
+                        className="md:col-span-2 row-span-2 relative rounded-[2.5rem] overflow-hidden group shadow-lg h-80 md:h-auto"
                     >
                         <Image 
                             src="/images/corporate.png" 
@@ -61,7 +61,7 @@ export default function ValuePropositionSection() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="md:col-span-1 row-span-1 md:row-span-2 relative rounded-[2.5rem] overflow-hidden group shadow-lg"
+                        className="md:col-span-1 row-span-1 md:row-span-2 relative rounded-[2.5rem] overflow-hidden group shadow-lg h-80 md:h-auto"
                     >
                          <Image 
                             src="/images/session-1on1.png" 
