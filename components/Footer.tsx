@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className="bg-neutral text-neutral-content">
              <div className="footer p-10 max-w-7xl mx-auto">
                 <aside>
-                    <div className="text-3xl font-bold mb-2 text-primary-content">Vivi Breathwork</div>
+                    <div className="text-3xl font-heading font-bold mb-2 text-primary-content lowercase">vivi gonzález</div>
                     <p className="font-medium">Transformando vidas a través de la respiración.<br/>Bienestar corporativo y personal.</p>
                     <div className="flex gap-4 mt-4">
                         <a href="https://www.instagram.com/vivibreathwork/" target="_blank" rel="noopener noreferrer" className="btn btn-square btn-ghost btn-sm hover:scale-110 transition-transform">
@@ -23,6 +23,7 @@ export default function Footer() {
                 <nav>
                     <h6 className="footer-title opacity-100 text-white">Explora</h6> 
                     <a href="#" className="link link-hover">Inicio</a>
+                    <a href="#sobre-mi" className="link link-hover">Sobre Mí</a>
                     <a href="#faq" className="link link-hover">Preguntas Frecuentes</a>
                     <a href="#contacto" className="link link-hover">Contacto</a>
                 </nav> 

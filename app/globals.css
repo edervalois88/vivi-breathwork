@@ -2,22 +2,30 @@
 @plugin "daisyui";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #334155;
+  --background: #E6E2DE;
+  --foreground: #353535;
   
-  /* Breathwork Theme Overrides for DaisyUI */
-  --color-primary: #22d3ee;    /* Cyan-400 */
+  /* Breathwork Theme Overrides - Brand Identity */
+  --color-primary: #545847;    /* Moss */
   --color-primary-content: #ffffff;
-  --color-secondary: #818cf8;  /* Indigo-400 */
+  
+  --color-secondary: #637B84;  /* Lagoon */
   --color-secondary-content: #ffffff;
-  --color-accent: #2dd4bf;     /* Teal-400 */
-  --color-accent-content: #ffffff;
-  --color-neutral: #1e293b;    /* Slate-800 */
-  --color-neutral-content: #ffffff;
-  --color-base-100: #f8fafc;   /* Slate-50 */
-  --color-base-200: #f1f5f9;   /* Slate-100 */
-  --color-base-300: #e2e8f0;   /* Slate-200 */
-  --color-base-content: #334155; /* Slate-700 */
+  
+  --color-accent: #C9BDA9;     /* Beige */
+  --color-accent-content: #353535;
+  
+  --color-neutral: #353535;    /* Stone Grey / Contrast */
+  --color-neutral-content: #E6E2DE;
+  
+  --color-base-100: #E6E2DE;   /* Oyster */
+  --color-base-200: #DAD6D2;   /* Slightly darker oyster for depth */
+  --color-base-300: #CUC9C5;   /* Even darker */
+  --color-base-content: #353535; /* Stone Grey */
+  
+  /* Additional Palette Colors as Vars if needed */
+  --color-earth-brown: #564231;
+  --color-indigo: #B4BFC9;
   
   --radius-selector: 2rem;
   --radius-field: 1rem;
@@ -27,8 +35,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-dm);
-  --font-heading: var(--font-outfit);
+  --font-sans: var(--font-public);
+  --font-heading: var(--font-instrument);
   
   /* Map DaisyUI colors to Tailwind theme for utility usage */
   --color-primary: var(--color-primary);
@@ -42,4 +50,17 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-image: url('/images/brand/texture-noise.jpg');
+  opacity: 0.08;
+  pointer-events: none;
+  background-repeat: repeat;
+  mix-blend-mode: overlay;
 }

@@ -1,6 +1,7 @@
 "use client";
 import HeroSection from "@/components/HeroSection";
 import ValuePropositionSection from "@/components/ValuePropositionSection";
+import AboutSection from "@/components/AboutSection";
 import ServiceCard from "@/components/ServiceCard";
 import FAQAccordion from "@/components/FAQAccordion";
 import ContactForm from "@/components/ContactForm";
@@ -20,51 +21,76 @@ export default function Home() {
       <HeroSection />
       
       <ValuePropositionSection />
+
+      <AboutSection />
       
       <section id="servicios" className="py-24 bg-base-200">
         <div className="max-w-7xl mx-auto px-4">
              <div className="text-center mb-16">
                 <div className="badge badge-primary badge-outline mb-4 p-4 font-bold">Mis Servicios</div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-base-content">Planes Diseñados para Ti</h2>
-                <p className="text-xl text-base-content/70 max-w-2xl mx-auto">Ya sea que busques crecimiento personal o transformar la cultura de tu equipo, tengo una propuesta a tu medida.</p>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-base-content">Experiencias y Programas</h2>
+                <p className="text-xl text-base-content/70 max-w-2xl mx-auto">Propuestas educativas y prácticas diseñadas para transformar tu biología y tu mente.</p>
              </div>
              
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-stretch">
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+                
+                {/* Service 1: Coaching */}
                 <ServiceCard 
-                    title="Sesión 1 a 1"
-                    description="Un espacio exclusivo para ti. Trabajaremos en tus bloqueos específicos y diseñaremos una rutina de respiración personalizada."
+                    title="Coaching 1:1"
+                    description="Programas personalizados diseñados según tus objetivos: regulación emocional, estrés, sueño, enfoque o rendimiento."
                     features={[
-                        "Duración: 60-90 minutos", 
-                        "Modalidad: Online o Presencial", 
-                        "Grabación de la sesión", 
-                        "Guía PDF post-sesión"
+                        "Duración: 6, 10 o 12 semanas", 
+                        "Diseño 100% personalizado", 
+                        "Modalidad Online",
+                        "Seguimiento profundo"
                     ]}
-                    ctaText="Agendar Sesión"
+                    imageSrc="/images/session-1on1.png"
+                    ctaText="Aplicar al Programa"
                     onAction={openModal}
                 />
+
+                {/* Service 2: Cursos */}
                 <ServiceCard 
-                    title="Wellness Corporativo"
-                    description="Programas estratégicos para reducir el ausentismo y elevar la productividad. Inversión con alto retorno en capital humano."
+                    title="Cursos y Talleres"
+                    description="Programas de educación + práctica + herramientas aplicables a la vida diaria. Diseñados para empresas, grupos privados o estudios."
                     features={[
-                        "Workshops In-Company", 
-                        "Pausas Activas Guiadas", 
-                        "Team Building Consciente", 
-                        "Reporte de Impacto"
+                        "Online y Presenciales", 
+                        "Para empresas y equipos", 
+                        "Fundamentos del Breathwork",
+                        "Herramientas para la vida diaria"
                     ]}
+                    imageSrc="/images/corporate.png"
                     isPopular={true}
-                    ctaText="Solicitar Cotización"
+                    ctaText="Ver Información"
                     onAction={scrollToContact}
                 />
+
+                {/* Service 3: Experiencias */}
                 <ServiceCard 
-                    title="Cursos Grupales"
-                    description="Sumérgete en la energía colectiva. Cursos temáticos de 4 semanas para dominar los fundamentos del Breathwork."
+                    title="Experiencias Inmersivas"
+                    description="Espacios seguros, conscientes y regulados para conectar con tu interior."
                     features={[
-                        "4 Sesiones en vivo", 
-                        "Grupo de soporte (WhatsApp)", 
-                        "Material audiovisual", 
-                        "Acceso de por vida"
+                        "Sesiones guiadas de Breathwork",
+                        "Inmersión en tina de hielos", 
+                        "Flow respiratorio",
+                        "Regulación del sistema nervioso"
                     ]}
-                    ctaText="Ver Próximas Fechas"
+                    imageSrc="/images/brand/abstract-bg.png"
+                    ctaText="Próximas Fechas"
+                    onAction={scrollToContact}
+                />
+
+                {/* Service 4: Conferencias */}
+                <ServiceCard 
+                    title="Conferencias"
+                    description="Pláticas educativas sobre la importancia de la respiración, sistema nervioso, estrés y bienestar."
+                    features={[
+                        "Base científica", 
+                        "Lenguaje claro y accesible", 
+                        "Teoría + Práctica", 
+                        "Ideal para eventos y congresos"
+                    ]}
+                    ctaText="Cotizar Conferencia"
                     onAction={scrollToContact}
                 />
              </div>
@@ -88,7 +114,7 @@ export default function Home() {
                         <div className="mask mask-star-2 bg-orange-400"></div>
                     </div>
                     <p className="italic mb-6 text-lg relative text-base-content/80">
-                        <span className="text-6xl text-primary/20 absolute -top-4 -left-2 font-serif">"</span>
+                        <span className="text-6xl text-primary/20 absolute -top-4 -left-2 font-serif">&quot;</span>
                         Llegué buscando reducir mi ansiedad y encontré una herramienta poderosa para toda la vida. La guía es impecable.
                     </p>
                     <div className="flex items-center gap-4 mt-auto">
@@ -111,7 +137,7 @@ export default function Home() {
                         <div className="mask mask-star-2 bg-orange-400"></div>
                     </div>
                     <p className="italic mb-6 text-lg relative text-base-content/80">
-                         <span className="text-6xl text-primary/20 absolute -top-4 -left-2 font-serif">"</span>
+                         <span className="text-6xl text-primary/20 absolute -top-4 -left-2 font-serif">&quot;</span>
                         Implementamos el programa de bienestar en la empresa y el feedback del equipo fue increíble. Se respira otro aire en la oficina.
                     </p>
                     <div className="flex items-center gap-4 mt-auto">

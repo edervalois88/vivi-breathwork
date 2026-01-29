@@ -1,24 +1,41 @@
 "use client";
 import { motion } from "framer-motion";
 
+import Image from "next/image";
+
 export default function HeroSection() {
   const openModal = () => {
     const modal = document.getElementById('booking_modal') as HTMLDialogElement;
     if (modal) modal.showModal();
   };
 
-  const titleWords = ["Respira.", "Conecta.", "Transforma."];
+  const titleWords = ["Respirar", "Bien", "Lo cambia todo."];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 md:pt-20">
       
       {/* Abstract Background Image */}
-      <div className="absolute inset-0 z-0 opacity-40">
-        <img 
-            src="/images/hero-bg.png" 
-            alt="Breathwork abstract background" 
-            className="w-full h-full object-cover blur-3xl scale-110 animate-pulse-slow"
-        />
+      <div className="absolute inset-0 z-0 opacity-60">
+        <motion.div
+           animate={{ 
+             scale: [1, 1.1, 1],
+             rotate: [0, 1, -1, 0],
+           }}
+           transition={{ 
+             duration: 20, 
+             repeat: Infinity, 
+             ease: "easeInOut" 
+           }}
+           className="w-full h-full"
+        >
+             <Image 
+                src="/images/brand/abstract-bg.png" 
+                alt="Atmósfera etérea" 
+                fill
+                priority
+                className="object-cover blur-[50px]"
+            />
+        </motion.div>
       </div>
 
       <div className="container mx-auto px-4 z-10 flex flex-col items-center text-center">
@@ -31,7 +48,7 @@ export default function HeroSection() {
             className="mb-8"
         >
             <span className="px-4 py-2 rounded-full border border-primary/30 bg-white/30 backdrop-blur-md text-xs md:text-sm font-medium text-primary shadow-sm">
-                ✨ Bienestar Integral a través de la Respiración
+                ✨ Respirar es vital y aprender lo cambia todo
             </span>
         </motion.div>
 
@@ -56,7 +73,7 @@ export default function HeroSection() {
           transition={{ delay: 1.2, duration: 1 }}
           className="text-xl md:text-2xl text-base-content/70 max-w-2xl mb-12 font-light"
         >
-          Domina el arte del Breathwork para desbloquear tu potencial, reducir el estrés y encontrar claridad en un mundo ruidoso.
+          Ayudo a personas a mejorar su salud, bienestar, resiliencia y rendimiento a través de la respiración.
         </motion.p>
 
         <motion.div

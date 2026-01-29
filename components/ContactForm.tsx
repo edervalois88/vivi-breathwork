@@ -44,8 +44,8 @@ export default function ContactForm() {
                                 </div>
                                 <div className="form-control w-full">
                                     <label className="label"><span className="label-text font-semibold">Interés Principal</span></label>
-                                    <select className="select select-bordered w-full">
-                                        <option disabled selected>Selecciona una opción</option>
+                                    <select className="select select-bordered w-full" defaultValue="Selecciona una opción">
+                                        <option disabled>Selecciona una opción</option>
                                         <option>Sesión Individual (1 a 1)</option>
                                         <option>Programa Wellness Empresarial</option>
                                         <option>Taller Grupal</option>

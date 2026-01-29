@@ -4,6 +4,7 @@ import Link from 'next/link';
 export default function Header() {
     const navLinks = [
         { name: "Inicio", href: "/" },
+        { name: "Sobre Mí", href: "#sobre-mi" },
         { name: "Servicios", href: "#servicios" },
         { name: "Preguntas", href: "#faq" },
         { name: "Contacto", href: "#contacto" },
@@ -23,7 +24,7 @@ export default function Header() {
               </ul>
             </div>
             <Link href="/" className="btn btn-ghost text-xl font-bold">
-                <span className="text-primary">Vivi</span>Breathwork
+                <span className="font-heading text-2xl lowercase">vivi gonzález</span>
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
