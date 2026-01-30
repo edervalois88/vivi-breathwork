@@ -37,7 +37,43 @@ export default function ValuePropositionSection() {
                 {/* Venn Diagram Visual - The Bridge (Clean Light Design) */}
                 <div className="relative w-full max-w-6xl mx-auto mb-24 md:mb-32 flex flex-col items-center justify-center">
                     
-                    <div className="relative w-full max-w-4xl h-[400px] md:h-[500px] flex items-center justify-center">
+                    {/* Mobile View: Vertical Stack (Linear Flow) */}
+                    <div className="flex md:hidden flex-col items-center gap-6 w-full max-w-sm">
+                        
+                        {/* Body Card */}
+                        <div className="w-full p-8 rounded-[2rem] border border-primary/20 bg-white/50 text-center">
+                            <span className="block font-sans text-sm tracking-[0.2em] font-bold text-primary mb-1">CUERPO</span>
+                            <span className="block font-heading italic text-lg opacity-80 text-base-content">(Fisiología)</span>
+                        </div>
+
+                        <div className="text-2xl text-primary/50">+</div>
+
+                        {/* Mind Card */}
+                        <div className="w-full p-8 rounded-[2rem] border border-primary/20 bg-white/50 text-center">
+                            <span className="block font-sans text-sm tracking-[0.2em] font-bold text-primary mb-1">MENTE</span>
+                            <span className="block font-heading italic text-lg opacity-80 text-base-content">(Estado Emocional)</span>
+                        </div>
+
+                         <div className="text-2xl text-primary/50">=</div>
+
+                        {/* Result: Breath */}
+                        <div className="w-full aspect-[4/5] relative rounded-[50%] border-4 border-white shadow-xl overflow-hidden mx-auto max-w-[200px]">
+                            <Image 
+                                src="/images/hero-bg.png" 
+                                alt="Respiración Regulada" 
+                                fill
+                                className="object-cover brightness-75"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <h3 className="text-white text-center font-heading text-xl leading-none tracking-wide drop-shadow-md">
+                                    RESPIRACIÓN<br/>REGULADA
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Desktop View: Venn Diagram */}
+                    <div className="hidden md:flex relative w-full max-w-4xl h-[500px] items-center justify-center">
                         
                         {/* Center Image (The Intersection - Almond Shape) */}
                         <motion.div 
@@ -45,7 +81,7 @@ export default function ValuePropositionSection() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 1.5, ease: "easeOut" }}
-                                className="absolute z-10 w-56 h-72 md:w-72 md:h-96 overflow-hidden shadow-2xl border-[1px] border-white/50 bg-[#637B84]"
+                                className="absolute z-10 w-72 h-96 overflow-hidden shadow-2xl border-[1px] border-white/50 bg-[#637B84]"
                                 style={{ borderRadius: "50%" }} // Vertical Ellipse
                         >
                                 <Image 
@@ -58,7 +94,7 @@ export default function ValuePropositionSection() {
                             <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(0,0,0,0.3)] pointer-events-none"></div>
                             
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <h3 className="text-white text-center font-heading text-2xl md:text-3xl leading-none tracking-wide drop-shadow-lg filter">
+                                <h3 className="text-white text-center font-heading text-3xl leading-none tracking-wide drop-shadow-lg filter">
                                     RESPIRACIÓN<br/>REGULADA
                                 </h3>
                             </div>
@@ -70,11 +106,11 @@ export default function ValuePropositionSection() {
                             whileInView={{ x: 0, opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 1.2, delay: 0.2 }}
-                            className="absolute left-1/2 -translate-x-[75%] md:-translate-x-[60%] w-64 h-64 md:w-[28rem] md:h-[28rem] rounded-full border border-primary/30 flex items-center justify-start md:justify-center p-8 md:p-12 hover:border-primary/60 transition-colors duration-500"
+                            className="absolute left-1/2 -translate-x-[60%] w-[28rem] h-[28rem] rounded-full border border-primary/30 flex items-center justify-center p-12 hover:border-primary/60 transition-colors duration-500"
                         >
-                            <div className="text-right md:text-center w-full pr-12 md:pr-16 md:pl-8">
-                                <span className="block font-sans text-sm md:text-lg tracking-[0.2em] font-light mb-2 text-primary">CUERPO</span>
-                                <span className="block font-heading italic text-lg md:text-xl opacity-80 text-primary">(Fisiología)</span>
+                            <div className="text-center w-full pr-16 pl-8">
+                                <span className="block font-sans text-lg tracking-[0.2em] font-light mb-2 text-primary">CUERPO</span>
+                                <span className="block font-heading italic text-xl opacity-80 text-primary">(Fisiología)</span>
                             </div>
                         </motion.div>
 
@@ -84,11 +120,11 @@ export default function ValuePropositionSection() {
                                 whileInView={{ x: 0, opacity: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 1.2, delay: 0.2 }}
-                                className="absolute right-1/2 translate-x-[75%] md:translate-x-[60%] w-64 h-64 md:w-[28rem] md:h-[28rem] rounded-full border border-primary/30 flex items-center justify-end md:justify-center p-8 md:p-12 hover:border-secondary/60 transition-colors duration-500"
+                                className="absolute right-1/2 translate-x-[60%] w-[28rem] h-[28rem] rounded-full border border-primary/30 flex items-center justify-center p-12 hover:border-secondary/60 transition-colors duration-500"
                         >
-                                <div className="text-left md:text-center w-full pl-12 md:pl-16 md:pr-8">
-                                <span className="block font-sans text-sm md:text-lg tracking-[0.2em] font-light mb-2 text-primary">MENTE</span>
-                                <span className="block font-heading italic text-lg md:text-xl opacity-80 text-primary">(Estado Emocional)</span>
+                                <div className="text-center w-full pl-16 pr-8">
+                                <span className="block font-sans text-lg tracking-[0.2em] font-light mb-2 text-primary">MENTE</span>
+                                <span className="block font-heading italic text-xl opacity-80 text-primary">(Estado Emocional)</span>
                             </div>
                         </motion.div>
                     </div>

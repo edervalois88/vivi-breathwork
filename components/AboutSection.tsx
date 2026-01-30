@@ -18,7 +18,7 @@ export default function AboutSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="w-full md:w-5/12 relative sticky top-24"
+                        className="w-full md:w-5/12 relative lg:sticky lg:top-24 mb-12 md:mb-0"
                     >
                         <div className="relative aspect-[3/4] w-full max-w-md mx-auto rounded-[2rem] overflow-hidden shadow-xl">
                             <Image 
@@ -53,49 +53,43 @@ export default function AboutSection() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="w-full md:w-7/12"
                     >
-                        <div className="badge badge-primary badge-outline mb-6 px-4 py-3 font-semibold tracking-wider">QUIÉN SOY</div>
+                        <div className="badge badge-primary badge-outline mb-8 px-4 py-3 font-semibold tracking-wider">QUIÉN SOY</div>
                         
-                        <div className="space-y-8 text-lg text-base-content/80 leading-relaxed font-light text-justify">
-                            <p className="font-medium text-xl text-base-content transform-cpu">
-                                Durante mucho tiempo, mientras la vida seguía, yo me estaba rompiendo por dentro.
-                            </p>
-                            
-                            <p>
-                                Vivía un vacío profundo. Sostenía malos hábitos. Me rodeaba de personas que no compartían mi filosofía de vida. Poco a poco, todo eso me fue alejando de mí. Apagué mi esencia, mi autoestima se fue debilitando y empecé a tomar decisiones que no estaban alineadas con quien realmente era.
-                            </p>
-
-                            <div className="pl-6 border-l-4 border-primary/20 italic">
+                        <div className="space-y-8 text-lg text-base-content/80 leading-relaxed text-left">
+                            <div>
+                                <h3 className="text-2xl font-heading font-bold text-base-content mb-4">El camino hacia la regulación</h3>
                                 <p>
-                                    La vida, de alguna forma, me dio una segunda oportunidad. Una ruptura me obligó a cuestionarlo absolutamente todo. Quién soy. Qué quiero de mi vida. Con quién quiero estar.
+                                    Durante mucho tiempo, viví desconectada de mí misma. Sosteniendo hábitos que me drenaban y rodeada de entornos que no resonaban con mi esencia. El resultado fue un vacío profundo y una salud debilitada.
                                 </p>
                             </div>
 
-                            <p>
-                                Sabía que quería un estilo de vida diferente. Había algo dentro de mí que sabía que así no quería seguir viviendo. Pero no sabía por dónde empezar. <br/>
-                                <span className="font-medium text-base-content">¿Cómo cambias el rumbo cuando llevas tanto tiempo caminando en una misma dirección?</span>
-                            </p>
-                            
-                            <p>
-                                Me daba miedo dar pasos distintos a los que conocía. Miedo a perder personas en el camino. Miedo a los cambios radicales. Miedo a ser diferente.
-                            </p>
+                            <div className="pl-6 border-l-4 border-primary/20 italic bg-base-200/30 p-6 rounded-r-2xl">
+                                <p className="font-heading text-xl text-primary">
+                                    &ldquo;La vida me dio una segunda oportunidad para cuestionarlo todo: Quién soy, qué quiero y cómo quiero vivir.&rdquo;
+                                </p>
+                            </div>
 
-                            <h3 className="text-2xl font-heading font-bold text-primary pt-4">Y en medio de todo eso, llegó el breathwork a mi vida.</h3>
+                            <div>
+                                <h4 className="font-bold text-base-content mb-2">El Descubrimiento</h4>
+                                <p>
+                                    En medio de la incertidumbre, el <strong>breathwork</strong> llegó a mi vida no como una técnica más, sino como la respuesta que mi sistema nervioso gritaba. Descubrí que llevaba años respirando mal:
+                                </p>
+                                <ul className="mt-4 space-y-2 ml-4 list-disc marker:text-primary">
+                                    <li>Respiración bucal y superficial</li>
+                                    <li>Estado de alerta crónico</li>
+                                    <li>Fatiga y ansiedad constante</li>
+                                </ul>
+                            </div>
 
-                            <p>
-                                <strong className="text-primary block mb-2">Volver al cuerpo</strong>
-                                La respiración no solo me dio calma. Me dio claridad. Me dio presencia. Y, poco a poco, me dio sentido. Me permitió deconstruirme para volver a construirme.
-                            </p>
+                            <div>
+                                <h4 className="font-bold text-base-content mb-2">Mi Misión Hoy</h4>
+                                <p>
+                                    No se trata solo de inhalar y exhalar. Se trata de usar tu biología a tu favor. Hoy, mi propósito es enseñarte esta herramienta científica y accesible para que tú también recuperes el control de tu cuerpo y tu mente.
+                                </p>
+                            </div>
 
-                            <p>
-                                Recuerdo darme cuenta de algo que me impactó profundamente: <strong>Respiraba muy mal.</strong> Respiraba rápido, por el pecho. Respiraba por la boca durante las noches. Vivía en estrés, ansiedad y en un estado constante de alerta.
-                            </p>
-
-                            <p>
-                                Ser consciente de mi respiración hizo que todo, poco a poco, empezara a mejorar. <span className="italic">Awareness is the key to all positive change.</span>
-                            </p>
-
-                            <p className="font-medium text-base-content">
-                                Hoy estoy decidida a compartir esta herramienta que todos llevamos con nosotros, pero que muy pocos sabemos usar a nuestro favor. Pero no quiero que me creas. Quiero que lo experimentes.
+                            <p className="font-medium text-xl text-primary pt-4">
+                                ¿Listo para transformar tu biología?
                             </p>
                         </div>
                     </motion.div>
